@@ -69,7 +69,7 @@ const Shop = (()=>{
     return(
         <Router>
             <Header/>
-            <Nav/>
+            <Nav items={users[0].basket.length}/>
             <Routes>
                 <Route path="/" element={<ItemsView items={items} addToBasket={addToBasket}/>}/>
                 <Route path="/basket" element={<Basket users={users} deleteFromBasket={deleteFromBasket}/>}/>

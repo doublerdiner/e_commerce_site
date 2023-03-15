@@ -1,5 +1,19 @@
 import React from "react";
 import Item from "./Item";
+import styled from "styled-components";
+
+const BasketDesign = styled.h2`
+padding: 1rem;
+`
+const SubBasketDesign = styled.h3`
+padding: 0 1rem 1rem;
+margin: 0;
+`
+
+const Flex = styled.ul`
+display: flex;
+flex-wrap: wrap;
+`
 
 const Basket = ({users, deleteFromBasket})=>{
     
@@ -15,12 +29,12 @@ const Basket = ({users, deleteFromBasket})=>{
 
     return(
         <>
-            <h2>Your Basket</h2>
-            <h3>User: {user.name}</h3>
-            {basket.length ? null : <h3>Your Basket is empty.</h3>}
-            <ul>
+            <BasketDesign>Your Basket</BasketDesign>
+            <SubBasketDesign>User: {user.name}</SubBasketDesign>
+            {basket.length ? null : <SubBasketDesign>Your Basket is empty.</SubBasketDesign>}
+            <Flex>
                 {basketObjects}
-            </ul>
+            </Flex>
 
         </>
 

@@ -1,5 +1,15 @@
 import React from "react";
 import Item from "./Item";
+import styled from "styled-components";
+
+const ItemsDesign = styled.h2`
+padding: 1rem;
+`
+
+const Flex = styled.ul`
+display: flex;
+flex-wrap: wrap;
+`
 
 const ItemsView = ({items, addToBasket})=>{
     
@@ -15,10 +25,10 @@ const ItemsView = ({items, addToBasket})=>{
 
     return(
         <>
-            <h2>Items</h2>
-            <ul>
+            <ItemsDesign>Items</ItemsDesign>
+            <Flex id="item-view">
                 {itemObjects}
-            </ul>
+            </Flex>
         </>
     )
 }
