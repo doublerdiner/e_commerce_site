@@ -1,10 +1,9 @@
 import './App.css';
+import Shop from './controllers/Shop';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
+    <Shop/>
   );
 }
 
